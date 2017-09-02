@@ -17,14 +17,18 @@ class ViewController: UIViewController {
     var presNo = 0
     
     @IBAction func Button1_Tap(_ sender: Any) {
-        
+        tabcount = tabcount + 1
         if tabcount != presNo{
-            tabcount = tabcount + 1
+            
             Label1.text = "Buttons are cool!"
         }
         // else if pressedNo >= 3{
         if tabcount >= 3{
-            Label1.text = "Stop pressing!"
+            Label1.text = "You've pressed \(tabcount) times!"
+            tabcount = presNo
+        }
+        if tabcount >= 10{
+            Label1.text = "How many more times are you gonna press??? You've pressed \(tabcount) times!"
             tabcount = presNo
         }
     }
