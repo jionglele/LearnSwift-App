@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         }
         if tabcount >= 10{
             Label1.text = "How many more times are you gonna press??? You've pressed \(tabcount) times!"
+            Label1.alpha = 100
+            Label1.adjustsFontSizeToFitWidth = true
             presNo = tabcount
         }
     }
@@ -36,7 +38,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.red
+        self.view.backgroundColor = UIColor.green
         
     }
 
